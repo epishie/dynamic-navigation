@@ -1,0 +1,2 @@
+include ':example', ':lib'
+rootProject.name='dynamic-navigation'
