@@ -1,0 +1,14 @@
+<manifest xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.epishie.dynamicnavigation.example.examplefeature">
+
+    <dist:module
+        dist:instant="false"
+        dist:onDemand="false"
+        dist:title="@string/title_examplefeature">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+</manifest>
+

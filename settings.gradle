@@ -1,2 +1,2 @@
-include ':example', ':lib'
+include ':example', ':lib', ':examplefeature'
 rootProject.name='dynamic-navigation'

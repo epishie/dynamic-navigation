@@ -9,5 +9,15 @@
         android:id="@+id/mainFragment"
         android:name="com.epishie.dynamicnavigation.example.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_featureGraph"
+            app:destination="@id/featureGraph" />
+    </fragment>
+
+    <dynamicGraph
+        android:id="@+id/featureGraph"
+        app:graphPackage="com.epishie.dynamicnavigation.example.examplefeature"
+        app:graphName="feature" />
+
 </navigation>
