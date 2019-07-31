@@ -1,6 +1,9 @@
 apply plugin: 'com.android.dynamic-feature'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../example-dependencies.gradle'
 
 android {
     compileSdkVersion 29
@@ -13,13 +16,13 @@ android {
     dataBinding {
         enabled true
     }
+
+    lintOptions {
+        abortOnError false
+        ignoreWarnings true
+    }
 }
 
 dependencies {
     implementation project(':example')
-
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "androidx.appcompat:appcompat:$appcompat_version"
-    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
 }
